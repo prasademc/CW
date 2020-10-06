@@ -1,0 +1,12 @@
+<div class="thumbnail-container">
+  <img width="100%" height="auto" src="{{ thumbnailUrl }}" />
+</div>
+<div class="text-container">
+  <span class="text-container--brand">{{ brand }}</span>
+  <h4 class="text-container--title">{{ title }}</h4>
+  <h6 class="text-container--price">{{ price | currency:'AUD':'symbol' }}</h6>
+</div>
+<div class="action-container">
+  <a mat-raised-button routerLink="/product/{{id}}">VIEW DETAILS</a>
+  <a mat-raised-button [attr.product-id]="id" (click)="addToCart(id)" color="primary">ADD TO CART</a>
+</div>

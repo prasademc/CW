@@ -1,0 +1,58 @@
+<h1 class="title">Shopping Cart</h1>
+<div class="product-container">
+  <ul>
+    <li>PRODUCT</li>
+    <li>QUANTITY</li>
+    <li>TOTAL</li>
+    <li>ACTION</li>
+  </ul>
+  <ul *ngFor="let item of cartItems">
+    <li>
+      <span class="image">
+        <img src="{{ item.image }}" />
+      </span>
+      <div class="contant">
+        <h3> {{ item.title }}</h3>
+        <p class="brand">{{ item.brand }}</p>
+      </div>
+    </li>
+    <li class="btns">
+        <a class="btns__count">
+          {{ getQuantity(item.quantity) }}
+        </a>
+        <div class="btns__operators">
+          <a
+            (click)="add(item.quantity)"
+            class="btns__operators--operator"
+          >
+            <mat-icon aria-hidden="false" aria-label="Eadd">add</mat-icon>
+          </a>
+          <a
+            (click)="remove(item.quantity)"
+            class="btns__operators--operator"
+          >
+            <mat-icon aria-hidden="false" aria-label="remove">remove</mat-icon>
+          </a>
+        </div>
+    </li>
+    <li>
+      <p>{{ item.price | currency:'AUD':'symbol' }}</p>
+    </li>
+    <li>
+      <mat-icon aria-hidden="false" aria-label="close">close</mat-icon>
+    </li>
+  </ul>
+  <ul class="no-underline">
+    <li>SUBTOTAL</li>
+    <li>{{ subtotal | currency:'AUD':'symbol'}}</li>
+  </ul>
+  <ul class="no-underline">
+    <li>SUBTOTAL</li>
+    <li>{{ total | currency:'AUD':'symbol'}}</li>
+  </ul>
+  <mat-divider></mat-divider>
+  <ul class="no-underline">
+    <li><a>CONTINUE SHOPPING</a></li>
+    <li><a mat-raised-button color="primary">CHECKOUT ({{ total | currency:'AUD':'symbol'}})</a></li>
+  </ul>
+</div>

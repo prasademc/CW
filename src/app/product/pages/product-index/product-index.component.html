@@ -1,0 +1,6 @@
+<app-hero [title]="'Plates'" [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.'" [bgimage]="'/assets/images/plates-header.jpg'"></app-hero>
+<div class="product-container">
+  <div class="product-container--item" *ngFor="let product of products">
+    <app-card [thumbnailUrl]="product.image" [title]="product.title" [brand]="product.brand" [price]="product.price" [id]="product.id"></app-card>
+  </div>
+</div>

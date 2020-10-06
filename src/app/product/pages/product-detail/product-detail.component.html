@@ -1,0 +1,38 @@
+<ul class="product-Breadcrumb">
+  <li>HOME&nbsp;/&nbsp;</li>
+  <li>PLATES&nbsp;/&nbsp;</li>
+  <li class="product-Breadcrumb--current">{{ title }}</li>
+</ul>
+<div class="product-container">
+  <div class="product-container--image">
+    <img src="{{ image }}" />
+  </div>
+  <div class="product-container--content">
+    <span class="product-container--content__brand">{{ brand }}</span>
+    <h4 class="product-container--content__title">{{ title }}</h4>
+    <h6 class="product-container--content__price">{{ price | currency:'AUD':'symbol' }}</h6>
+    <p class="product-container--content__description">{{ description }}</p>
+    <div class="product-container--content__action">
+      <div class="product-container--content__action--btns">
+        <a class="product-container--content__action--btns__count">
+          {{ count }}
+        </a>
+        <div class="product-container--content__action--btns__operators">
+          <a
+            (click)="add(count)"
+            class="product-container--content__action--btns__operators--operator"
+          >
+            <mat-icon aria-hidden="false" aria-label="Eadd">add</mat-icon>
+          </a>
+          <a
+            (click)="remove(count)"
+            class="product-container--content__action--btns__operators--operator"
+          >
+            <mat-icon aria-hidden="false" aria-label="remove">remove</mat-icon>
+          </a>
+        </div>
+      </div>
+      <a mat-raised-button (click)="addToCart(productId)" color="primary">ADD TO CART</a>
+    </div>
+  </div>
+</div>

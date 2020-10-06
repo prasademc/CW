@@ -1,0 +1,9 @@
+<span (click)="removeItem(id)" class="close">X</span>
+<span class="image">
+  <img src="{{ image }}" />
+</span>
+<div class="contant">
+  <h3> {{ title }}&nbsp;x&nbsp;{{ quantity }}</h3>
+  <p class="brand">{{ brand }}</p>
+  <p>{{ price | currency:'AUD':'symbol' }}</p>
+</div>

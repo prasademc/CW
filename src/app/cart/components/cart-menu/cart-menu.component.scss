@@ -1,0 +1,32 @@
+:host {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .total {
+    margin: 12px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .action-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    & > .mat-button-base {
+      width: calc(50% - 6px);
+      margin-right: 12px;
+      margin-bottom: 0 !important;
+
+      &:last-of-type {
+        margin-right: 0 !important;
+      }
+    }
+  }
+}

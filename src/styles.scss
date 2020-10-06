@@ -1,0 +1,79 @@
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+  $font-family: "'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+  $display-4: mat-typography-level(112px, 112px, 300),
+  $display-3: mat-typography-level(56px, 56px, 400),
+  $display-2: mat-typography-level(45px, 48px, 400),
+  $display-1: mat-typography-level(34px, 40px, 400),
+  $headline: mat-typography-level(24px, 32px, 400),
+  $title: mat-typography-level(20px, 32px, 500),
+  $subheading-2: mat-typography-level(16px, 28px, 400),
+  $subheading-1: mat-typography-level(15px, 24px, 400),
+  $body-2: mat-typography-level(16px, 24px, 500),
+  $body-1: mat-typography-level(16px, 20px, 400),
+  $caption: mat-typography-level(12px, 20px, 400),
+  $button: mat-typography-level(14px, 14px, 500),
+  $input: mat-typography-level(16px, 1.125, 400),
+);
+
+@include mat-base-typography($custom-typography);
+@include mat-checkbox-typography($custom-typography);
+@include angular-material-typography($custom-typography);
+
+@include mat-core($custom-typography);
+
+$primary-color: (
+  Main: #2D2B32,
+  Light: #56545B,
+  Dark: #02000A,
+  contrast: (
+    Main: #FFFFFF,
+    Light: #FFFFFF,
+    Dark: #000000,
+  ),
+);
+
+$accent-color: (
+  Main: #29B6F6,
+  Light: #73E8FF,
+  Dark: #0086C3,
+  contrast: (
+    Main: #FFFFFF,
+    Light: #FFFFFF,
+    Dark: #000000,
+  ),
+);
+
+$warn-color: (
+  Main: #E15759,
+  Light: #FF8986,
+  Dark: #AA2230,
+  contrast: (
+    Main: #FFFFFF,
+    Light: #FFFFFF,
+    Dark: #000000,
+  ),
+);
+
+$app-primary: mat-palette($primary-color, Main, Light, Dark);
+$app-accent: mat-palette($accent-color, Main, Light, Dark);
+$app-warn: mat-palette($warn-color, Main, Light, Dark);
+
+$app-theme: mat-light-theme(
+  $app-primary,
+  $app-accent,
+  $app-warn
+);
+
+@include angular-material-theme($app-theme);
+
+html,
+body {
+  height: 100%;
+  background-color: #f6f6f6;
+}
+
+@import './app/styles/typo';
+@import './app/styles/base';
+@import './app/styles/btn';

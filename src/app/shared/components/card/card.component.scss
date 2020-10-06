@@ -1,0 +1,90 @@
+:host {
+  width: 100%;
+  padding: 0 22px 22px 22px;
+  position: relative;
+
+  .thumbnail-container {
+    width: 100%;
+    height: 218px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .text-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 22px 0 22px;
+    background-color: #ffffff;
+
+    &--brand {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #7d7d7d;
+    }
+
+    &--title {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #2d2b32;
+    }
+
+    &--price {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #7d7d7d;
+    }
+  }
+
+  .action-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+    width: calc(100% - 44px);
+    height: calc(100% - 22px);
+    background-color: transparent;
+
+    & > .mat-button-base {
+      &:last-of-type {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  &:hover {
+    .action-container {
+      display: flex;
+      animation: fadein 1s forwards;
+    }
+  }
+}
+
+@keyframes fadein {
+  from {
+    background-color: transparent;
+    top: 22px;
+    opacity: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.1);
+    top: 0;
+    opacity: 1;
+  }
+}

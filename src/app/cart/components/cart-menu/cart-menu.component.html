@@ -1,0 +1,21 @@
+<div *ngIf="cartItems.length <= 0">The cart is empty.</div>
+<app-cart-item
+  *ngFor="let product of cartItems"
+  [id]="product.id"
+  [image]="product.image"
+  [title]="product.title"
+  [brand]="product.brand"
+  [price]="product.price"
+  [quantity]="product.quantity"
+></app-cart-item>
+<mat-divider></mat-divider>
+<div class="total">
+  <h4>TOTAL</h4>
+  <span>
+    {{ totalValue | currency:'AUD':'symbol' }}
+  </span>
+</div>
+<div class="action-container">
+  <a mat-raised-button routerLink="/cart">VIEW CART</a>
+  <a mat-raised-button color="primary">CHECKOUT</a>
+</div>

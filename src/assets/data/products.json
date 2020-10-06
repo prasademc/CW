@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Blue Stripe Stoneware Plate",
+    "brand": "Kiriko",
+    "category": "plate",
+    "price": 40,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.",
+    "image": "/assets/images/blue.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Hand Painted Blue Flat Dish",
+    "brand": "Kiriko",
+    "category": "plate",
+    "price": 28,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget arcu. Curabitur ac pharetra nisl, sit amet mattis dolor.",
+    "image": "/assets/images/hand-painted.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Heme",
+    "brand": "Dust & Form",
+    "category": "plate",
+    "price": 52,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget arcu. Curabitur ac pharetra nisl, sit amet mattis dolor.",
+    "image": "/assets/images/heme.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Mashiko-Yaki Green Small Plate",
+    "brand": "Kiriko",
+    "category": "plate",
+    "price": 28,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.",
+    "image": "/assets/images/green.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Mashiko-Yaki Indigo Small Plate",
+    "brand": "Kiriko",
+    "category": "plate",
+    "price": 28,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.",
+    "image": "/assets/images/indigo.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Mashiko-Yaki Saucer",
+    "brand": "Kiriko",
+    "category": "plate",
+    "price": 18,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.",
+    "image": "/assets/images/saucer.jpg"
+  }
+]

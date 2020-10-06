@@ -1,0 +1,23 @@
+<header>
+  <a href="/">
+    <img width="115px" height="68px" src="/assets/images/logo.png" />
+  </a>
+  <ul class="nav">
+    <li>
+      <a href="" target="_self">HOME</a>
+    </li>
+    <li>
+      <a href="" target="_self">SHOP<mat-icon aria-hidden="false" aria-label="SHOP">expand_more</mat-icon></a>
+    </li>
+    <li>
+      <a href="" target="_self">JOURNAL</a>
+    </li>
+    <li>
+      <a href="" target="_self">MORE<mat-icon aria-hidden="false" aria-label="MORE">expand_more</mat-icon></a>
+    </li>
+  </ul>
+  <a class="menu" [matMenuTriggerFor]="menu">MY CART (2)<mat-icon aria-hidden="false" aria-label="MY CART">expand_more</mat-icon></a>
+  <mat-menu #menu="matMenu">
+    <app-cart-menu></app-cart-menu>
+  </mat-menu>
+</header>
